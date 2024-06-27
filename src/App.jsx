@@ -15,6 +15,7 @@ const MovieDetailsPage = lazy(() =>
 );
 const NotFoundPage = lazy(() => import("./pages/NotFoundPage/NotFoundPage"));
 const MovieCast = lazy(() => import("./components/MovieCast/MovieCast"));
+const Navigation = lazy(() => import("./components/Navigation/Navigation"));
 const MovieReviews = lazy(() =>
   import("./components/MovieReviews/MovieReviews")
 );
@@ -27,10 +28,7 @@ const override = {
 const App = () => {
   return (
     <Router>
-      <nav>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/movies">Movies</NavLink>
-      </nav>
+      <Navigation />
       <Suspense
         fallback={<HashLoader cssOverride={override} color={"#FE5F55"} />}
       >
