@@ -27,7 +27,7 @@ const override = {
 
 const App = () => {
   return (
-    <Router>
+    <>
       <Navigation />
       <Suspense
         fallback={<HashLoader cssOverride={override} color={"#FE5F55"} />}
@@ -42,7 +42,7 @@ const App = () => {
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Suspense>
-    </Router>
+    </>
   );
 };
 
